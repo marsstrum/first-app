@@ -4,7 +4,16 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.8'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+#replaced line 7 with the following for Bloc training
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :development do
+	gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
